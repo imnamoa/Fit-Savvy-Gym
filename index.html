@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT SAVY GYM - Transform Your Body, Transform Your Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2><i class="fas fa-dumbbell"></i> FIT SAVY GYM</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">TRANSFORM YOUR BODY<br><span>TRANSFORM YOUR LIFE</span></h1>
+            <p class="hero-subtitle">World-Class Facilities | Expert Trainers | Proven Results</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary" onclick="openMembershipModal()">
+                    <i class="fas fa-fire"></i> JOIN NOW
+                </button>
+                <button class="cta-button secondary" onclick="scrollToContact()">
+                    <i class="fas fa-phone"></i> CONTACT US
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ABOUT FIT SAVY GYM</h2>
+                <p class="section-subtitle">Your Premier Fitness Destination in Agartala</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Why Choose FIT SAVY GYM?</h3>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> State-of-the-art equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Certified professional trainers</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 gym access</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized training programs</li>
+                        <li><i class="fas fa-check-circle"></i> Nutrition & diet consultation</li>
+                        <li><i class="fas fa-check-circle"></i> Spacious & clean environment</li>
+                    </ul>
+                    <p class="about-desc">Join thousands of satisfied members who have transformed their bodies and lives at FIT SAVY GYM. Whether you're a beginner or professional athlete, we have everything you need to achieve your fitness goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MEMBERSHIP PRICING</h2>
+                <p class="section-subtitle">Choose your perfect plan and start your transformation today</p>
+            </div>
+            
+            <!-- General Pricing -->
+            <div class="pricing-tabs">
+                <button class="tab-btn active" onclick="switchPricing('general')">General Members</button>
+                <button class="tab-btn" onclick="switchPricing('student')">Students</button>
+            </div>
+
+            <!-- General Pricing Cards -->
+            <div id="general-pricing" class="pricing-grid active">
+                <div class="pricing-card">
+                    <div class="card-badge">50% OFF Registration</div>
+                    <div class="card-header">
+                        <h3>3 Months</h3>
+                        <div class="price">₹3,500</div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check"></i> All Equipment</li>
+                        <li><i class="fas fa-check"></i> Group Classes</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('general-3months')">Join Now</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="card-badge popular-badge">MOST POPULAR</div>
+                    <div class="card-header">
+                        <h3>6 Months</h3>
+                        <div class="price">₹7,000</div>
+                        <span class="offer">+ 1 Month FREE Training & Diet</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check"></i> All Equipment</li>
+                        <li><i class="fas fa-check"></i> 1 Month FREE Personal Training</li>
+                        <li><i class="fas fa-check"></i> FREE Diet Plan</li>
+                        <li><i class="fas fa-check"></i> Group Classes</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('general-6months')">Join Now</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>1 Year + Lifetime</h3>
+                        <div class="price">₹12,000</div>
+                        <span class="offer">+ 1 Month FREE Training & Lifetime Access</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 1 Year Full Access</li>
+                        <li><i class="fas fa-check"></i> Lifetime Membership</li>
+                        <li><i class="fas fa-check"></i> FREE Personal Training</li>
+                        <li><i class="fas fa-check"></i> FREE Diet Plan</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('general-lifetime')">Join Lifetime</button>
+                </div>
+            </div>
+
+            <!-- Student Pricing Cards -->
+            <div id="student-pricing" class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-badge student-badge">STUDENT SPECIAL</div>
+                    <div class="card-header">
+                        <h3>3 Months</h3>
+                        <div class="price">₹2,000</div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check"></i> All Equipment</li>
+                        <li><i class="fas fa-check"></i> Group Classes</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('student-3months')">Join Now</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="card-badge popular-badge">BEST VALUE</div>
+                    <div class="card-header">
+                        <h3>6 Months</h3>
+                        <div class="price">₹3,000</div>
+                        <span class="offer">+ FREE Gym Shirt</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check"></i> FREE Gym Shirt</li>
+                        <li><i class="fas fa-check"></i> All Equipment</li>
+                        <li><i class="fas fa-check"></i> Group Classes</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('student-6months')">Join Now</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>1 Year</h3>
+                        <div class="price">₹6,000</div>
+                        <span class="offer">50% OFF + FREE Shirt</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Full Year Access</li>
+                        <li><i class="fas fa-check"></i> FREE Gym Shirt</li>
+                        <li><i class="fas fa-check"></i> Priority Access</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('student-1year')">Join Now</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Lifetime</h3>
+                        <div class="price">₹10,000</div>
+                        <span class="offer">Lifetime FREE Membership</span>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> LIFETIME Access</li>
+                        <li><i class="fas fa-check"></i> FREE Gym Shirt</li>
+                        <li><i class="fas fa-check"></i> All Benefits</li>
+                    </ul>
+                    <button class="plan-btn" onclick="selectPlan('student-lifetime')">Lifetime Access</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">OUR FACILITY</h2>
+                <p class="section-subtitle">State-of-the-art equipment and premium facilities</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1519710164239-da5423b4aab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1535738689127-850405b59e35?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1593410788884-bcf49b233c16?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <p class="section-subtitle">Ready to start your fitness journey?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Gymnahar, Agartala, Tripura 799001</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91 97038 32441</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p>24/7 Open</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>FIT SAVY GYM</h3>
+                    <p>Transform Your Body, Transform Your Life</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>For More Information:</strong></p>
+                    <p><i class="fas fa-phone"></i> 97038 32441</p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/fit_savvy_gym/" target="_blank">fit_savvy_gym</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FIT SAVY GYM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Membership Modal -->
+    <div id="membershipModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Select Your Membership</h2>
+            <form id="membershipForm">
+                <input type="text" id="modalName" placeholder="Full Name *" required>
+                <input type="tel" id="modalPhone" placeholder="Phone Number *" required>
+                <input type="email" id="modalEmail" placeholder="Email Address *" required>
+                <input type="hidden" id="selectedPlan">
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn">Confirm Registration</button>
+                    <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
